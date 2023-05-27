@@ -1,0 +1,21 @@
+html 
+    head 
+        title= "Quiz"
+    body 
+        h2= Quiz 
+        form(action="/admin/savePost" method="post")
+            div.quiz_section#register_webinar
+                div
+                    input(name ="question" placeholder="Enter Your Question" type="text")#wnr1
+                div
+                    input(name ="option1" placeholder="First Option" type="text")#wnr2
+                div
+                    input(name ="option2" placeholder="Second Option" type="text")#wnr3
+                div
+                    input(name ="option3" placeholder="Third Option" type="text")#wnr4
+                div
+                    input(name ="option4" placeholder="Fourth Option" type="text")#wnr5
+                div
+                    input(name ="answer" placeholder="Correct Answer" type="text")#wnr6
+                div
+                    button(type="submit" name="login")= loginButton 

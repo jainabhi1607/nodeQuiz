@@ -1,0 +1,19 @@
+html 
+    head 
+        title= "Quiz"
+    body 
+        h2= "Quiz" 
+        form(action="/admin/checkAnswer" method="post" )
+            each quiz in quizes
+                #quiz
+                    h3#question= quiz.question
+                    input(type='radio', name='answer['+quiz.id+']', id= 'id1'+quiz.id value=quiz.option1)
+                    label(for='id1'+quiz.id)= quiz.option1
+                    input(type='radio', name='answer['+quiz.id+']', id= 'id2'+quiz.id value=quiz.option2)
+                    label(for='id2'+quiz.id)= quiz.option2
+                    input(type='radio', name='answer['+quiz.id+']', id= 'id3'+quiz.id value=quiz.option3)
+                    label(for='id3'+quiz.id)= quiz.option3
+                    input(type='radio', name='answer['+quiz.id+']', id= 'id4'+quiz.id value=quiz.option4)
+                    label(for='id4'+quiz.id)= quiz.option4
+            #submit 
+                button(type="submit" name="login") Submit
