@@ -59,7 +59,7 @@ adminRouter.post("/checkAnswer", async (req,res) => {
         let id=''
         let correctAnswer=''
         let correctAnswerCount = 0;
-        
+
         for (let x in quizListing) {
             id = quizListing[x]['id']
             correctAnswer = quizListing[x]['answer']
@@ -72,6 +72,10 @@ adminRouter.post("/checkAnswer", async (req,res) => {
         //  const quiz = new Quiz({question, options, answer})
         //  await quiz.save()
         //  res.status(201).json(quiz)
+
+        res.render("quizResult",{
+            correctAnswerCount,
+        })
      }
      catch(error){
          console.log(error)
